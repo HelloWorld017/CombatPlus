@@ -1,0 +1,20 @@
+WEAPON_SHOP: "[WEAPON SHOP]"
+AMMO_DISPLAY: "AMMO : %s1"
+COST: "PRICE : %s1XP"
+CLASS: Class %s1
+GUN_DISPLAY: "%s1"
+NO_PERMISSION_DESTROY: You are not allowed to remove shops.
+NOT_YOUR_SHOP: This shop is not yours!
+SHOP_DESTROYED: Successfully removed shop.
+NO_PERMISSION_USE: You are not allowed to use shops.
+BOUGHT: Successfully bought.
+BOUGHT_COLOR_NAME_MONEY: Successfully bought §o§l%s1[%s2]§r for %s3 XP.
+AMMO: "%s1 Ammos"
+NO_MONEY: You are too pour to buy this.
+DOUBLE_TAP_TO_BUY: Double tap to buy!
+SHOP_CREATED: Shop successfully created.
+NOT_INGAME: You must buy when the game goes on.
+WEAPONS: Weapons
+GUNS: Guns
+GRENADES: Grenades
+ALREADY_BOUGHT:

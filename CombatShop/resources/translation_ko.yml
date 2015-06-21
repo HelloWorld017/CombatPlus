@@ -1,0 +1,19 @@
+WEAPON_SHOP: "[무기 상점]"
+AMMO_DISPLAY: "총알 : %s1"
+COST: "가격 : %s1"
+CLASS: "%s1 클래스"
+GUN_DISPLAY: "%s1"
+NO_PERMISSION_DESTROY: 당신은 이 상점을 제거할 권한이 없습니다!
+NOT_YOUR_SHOP: 이 상점은 당신의 것이 아닙니다!
+SHOP_DESTROYED: 성공적으로 상점을 제거하였습니다.
+NO_PERMISSION_USE: 당신은 상점을 사용할 권한이 없습니다!
+BOUGHT: 성공적으로 구매하였습니다.
+BOUGHT_COLOR_NAME_MONEY: §o%s1[%s2]§r를 %s3XP에 샀습니다.
+AMMO: 총알 %s1개
+NO_MONEY: 당신은 이것을 사기에 너무 가난합니다!
+DOUBLE_TAP_TO_BUY: 한번 더 눌러주세요!
+SHOP_CREATED: 상점이 성공적으로 생성되었습니다!
+NOT_INGAME: 게임이 진행될 때 사야합니다!
+WEAPONS: 무기
+GUNS: 총
+GRENADES: 수류탄

@@ -1,0 +1,7 @@
+.git/
+.idea/
+DevToolsWithKhinenwFlavor/
+*.phar
+MineCombat/
+CombatPotionDispenser/.idea/
+CombatShop/combat_shops.yml

@@ -1,0 +1,25 @@
+#Khinenw's PotionDispenser
+name: CombatPotionDispenser
+author: Khinenw
+version: "0.0.1 alpha"
+description: "An potion dispenser for MineCombat"
+main: Khinenw\PotionDispenser\Dispenser
+api: 1.12.0
+depend: [MineCombat]
+
+permissions:
+  potiondispenser.*:
+    description: "The permission for using features of dispenser."
+    default: true
+    children:
+      potiondispenser.use: 
+        default: true
+        description: "The permission for using dispenser."
+
+      potiondispenser.create:
+        default: op
+        description: "The permission for creating dispensers."
+      
+      potiondispenser.destroy:
+        default: op
+        description: "The permission for destroying dispensers."

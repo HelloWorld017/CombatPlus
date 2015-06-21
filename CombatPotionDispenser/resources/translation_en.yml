@@ -1,0 +1,17 @@
+DOUBLE_TAP_TO_BUY: Double tap to buy!
+DISPENSER_CREATED: A dispenser created!
+DISPENSER: "[DISPENSER]"
+POTION_NAME: "Lev.%s2 %s1"
+POTION_NAME_NO_LEV: "%s1"
+DISPENSER_COST: "PRICE: %s1"
+NO_PERMISSION_DESTROY: You are not allowed to destroy this dispenser!
+NO_PERMISSION_USE: You are not allowed to use this dispenser!
+ALREADY_HAS_EFFECT: You already have same effect!
+NOT_YOUR_DISPENSER: This dispenser is not yours!
+DISPENSER_DESTROYED: Dispenser Destroyed!
+BOUGHT: Successfully bought this potion!
+#1 : color, 2 : name, 3 : price, 4 : monetary unit
+BOUGHT_COLOR_NAME_MONEY: "Successfully bought §o§l%s1[%s2]§r potion for %s3%s4"
+NO_MONEY: You are too poor to buy this potion!
+DURATION: "DURATION: %s1s"
+CLEAR: Clear

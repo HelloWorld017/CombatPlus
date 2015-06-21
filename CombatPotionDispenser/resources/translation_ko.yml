@@ -1,0 +1,17 @@
+DOUBLE_TAP_TO_BUY: 한번 더 눌러주세요!
+DISPENSER_CREATED: 포션 디스펜서가 생성되었습니다!
+DISPENSER: "[디스펜서]"
+POTION_NAME: "Lev.%s2 %s1"
+POTION_NAME_NO_LEV: "%s1"
+DISPENSER_COST: "가격: %s1"
+NO_PERMISSION_DESTROY: 당신은 이 디스펜서를 제거할 권한이 없습니다!
+NO_PERMISSION_USE: 당신은 이 디스펜서를 사용할 권한이 없습니다!
+ALREADY_HAS_EFFECT: 당신은 이미 같은 효과를 가지고 있습니다!
+NOT_YOUR_DISPENSER: 이 디스펜서는 당신 것이 아닙니다!
+DISPENSER_DESTROYED: 포션 디스펜서가 제거되었습니다!
+BOUGHT: 포션을 구매하였습니다!
+#1 : color, 2 : name, 3 : price, 4 : monetary unit
+BOUGHT_COLOR_NAME_MONEY: "포션 §o§l%s1[%s2]§r을 %s3%s4에 구매하였습니다!"
+NO_MONEY: 이 플러그인을 구매하기에 너무 가난합니다!
+DURATION: "기간: %s1초"
+CLEAR: 초기화

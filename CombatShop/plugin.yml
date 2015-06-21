@@ -1,0 +1,31 @@
+#Khinenw's CombatShop
+name: CombatShop
+author: Khinenw
+version: "0.0.1 alpha"
+description: "An weapon store for MineCombat"
+main: Khinenw\CombatShop\CombatShop
+api: 1.12.0
+depend: [MineCombat]
+
+commands:
+  weapons:
+    description: "This command prints list of weapons."
+    usage: "/weapons"
+    permission: combatshop.use
+
+permissions:
+  combatshop.*:
+    description: "The permission for using features of combat shop."
+    default: true
+    children:
+      combatshop.use:
+        default: true
+        description: "The permission for using shops."
+
+      combatshop.create:
+        default: op
+        description: "The permission for creating shops."
+      
+      combatshop.destroy:
+        default: op
+        description: "The permission for destroying shops."
