@@ -19,6 +19,7 @@
 
 namespace Khinenw\MoWeapons;
 
+use Khinenw\MoWeapons\task\BazookaShootTask;
 use pocketmine\item\Item;
 use pocketmine\level\particle\SmokeParticle;
 use pocketmine\level\Position;
@@ -108,67 +109,21 @@ class Bazooka extends BaseGun{
 			$this->onShoot();
 			$this->setShoot(true);
 
-			$this->calculateVector($this->player->getDirectionVector()->multiply(3), $this->player->getPosition(), 50, 1, $this->player->getEyeHeight());
+			$bazookaTask = new BazookaShootTask($this, $this->player->getDirectionVector()->multiply(3), $this->player->getPosition(), 50, 1, $this->player->getEyeHeight());
+			$returnVal = $this->getPlugin()->getServer()->getScheduler()->scheduleRepeatingTask($bazookaTask, 2);
+			$bazookaTask->setHandler($returnVal);
+
 		}
 
 		return true;
 	}
 
-	public function calculateVector(Vector3 $vector, Position $position, $maxStep, $size, $yOffset){
-		$motionX = $vector->getX();
-		$motionY = $vector->getY();
-		$motionZ = $vector->getZ();
 
-		$x = $position->getX();
-		$y = $position->getY() + $yOffset;
-		$z = $position->getZ();
-
-		$return = ["stack" => array(), "final" => null];
-		$return["stack"] = array();
-
-		for($i = 0; $i < $maxStep; $i++){
-			$x += $motionX;
-			$y += $motionY;
-			$z += $motionZ;
-
-			$aabb = new AxisAlignedBB($x - $size, $y - $size, $z - $size, $x + $size, $y + $size, $z + $size);
-
-			$currentPos = new Position($x, $y, $z, $position->getLevel());
-
-			array_push($return["stack"], $currentPos);
-
-			$collidingEntities = $position->getLevel()->getCollidingEntities($aabb);
-
-			foreach($collidingEntities as $entity){
-				if($entity instanceof Player && $this->getPlugin()->isEnemy($this->player->getName(), $entity->getName())) {
-					$return["final"] = $currentPos;
-					$this->processBazookaShoot($return);
-					return;
-				}
-			}
-
-			$block = $position->getLevel()->getBlock($currentPos);
-			if($block->getId() !== 0 || $y < 0){
-				$return["final"] = $currentPos;
-				$this->processBazookaShoot($return);
-				return;
-			}
-		}
-
-		$this->processBazookaShoot(null);
-	}
 
 	public function processBazookaShoot($returnVal){
 		$this->setShoot(false);
-		if(!isset($returnVal["stack"])){
-			return;
-		}
 
-		foreach($returnVal["stack"] as $stackedPosition){
-			$this->player->getLevel()->addParticle($this->getParticle($stackedPosition, $this->color[0], $this->color[1], $this->color[2]));
-		}
-
-		if(!isset($returnVal["final"])){
+		if($returnVal === null){
 			return;
 		}
 

@@ -89,7 +89,9 @@ class CombatShop extends PluginBase implements Listener{
 
 		$this->addGrenade(new \ReflectionClass(FragmentationGrenade::class));
 
-		MineCombat::getInstance()->
+		foreach(MineCombat::getInstance()->getLoadedGuns() as $string){
+			$this->addWeapon(new \ReflectionClass($string));
+		}
 	}
 
 	public function onSignChange(SignChangeEvent $event){
